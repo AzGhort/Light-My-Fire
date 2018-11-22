@@ -6,8 +6,24 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    class Attacker : MonoBehaviour
+    public class Attacker : MonoBehaviour
     {
-
+        protected float attackTime;
+        protected Transform startPoint;
+        public float GetAttackTime()
+        {
+            return attackTime;
+        }
+        private void Start()
+        {
+            GetComponent<Collider2D>().gameObject.SetActive(false);
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                // do some dmg
+            }
+        }
     }
 }

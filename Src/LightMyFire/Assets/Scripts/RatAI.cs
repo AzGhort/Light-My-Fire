@@ -12,21 +12,26 @@ public class RatAI : MonoBehaviour
     public Transform shotSpawn1;
     public Transform shotSpawn2;
     public Transform shotSpawn3;
+    // private stuff
     private ShotController shotController = new ShotController();
+    private AttackController attackController = new AttackController();
     private AttackScheduler scheduler;
     private bool phaseTwo = false;
     private float nextShooting = 0;
     private float fireRate = 3.0f;
+    private float nextAttack = 0;
+    private float attackRate = 2.0f;
     // melee attacks
     public GameObject attack1;
     public GameObject attack2;
+    // rat
+    private Transform ratPos;
 
     public void TransformToPhaseTwo()
     {
         phaseTwo = true;
         // create rat somewhere
     }
-
     private void SetNewShooter(ShotConfiguration config)
     {
         Transform shotspawn = null;
@@ -96,12 +101,36 @@ public class RatAI : MonoBehaviour
     }
     private void CheckAttacking()
     {
+        if (attackController.IsAttacking()) return;
+        else
+        {
+            if (attackRate > 0.5f) attackRate -= 0.015f;
+            Transform player = GameObject.Find("dummyPlayer").transform;
+            Vector2 toPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
+            if (Time.time > nextAttack)
+            {
+                nextAttack = Time.time + attackRate;
+                Transform att = transform;
+                att.Translate(toPlayer.x / 2, toPlayer.y / 2, 0);
+                attackController.SetNewAttacker(attack2, att, scheduler.ScheduleAttackOpening(0.7f));
+            }
+            else if (toPlayer.sqrMagnitude <= 2.0f)
+            {
+                Transform att = transform;
+                att.Translate(toPlayer.x, toPlayer.y, 0);
+                attackController.SetNewAttacker(attack1, att, scheduler.ScheduleAttackOpening(0.5f));
+            }
+        }
+    }
+    private void TurnRound()
+    {
 
     }
 
     #region Unity engine called methods
     void Start()
     {
+        // difficulty!! 0 by default
         scheduler = new AttackScheduler(0f, 3);
     }
 	void FixedUpdate ()
@@ -111,7 +140,9 @@ public class RatAI : MonoBehaviour
         shotController.Shoot();
         if (phaseTwo)
         {
+            TurnRound();
             CheckAttacking();
+            attackController.Attack();
         }
     }
     #endregion 

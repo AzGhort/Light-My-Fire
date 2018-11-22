@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
     // auxiliary class, list extension methods
     static class ListExtensions
     {
-        private static Random rng = new Random();
+        private static System.Random rng = new System.Random();
         public static void Shuffle<T>(this IList<T> list)
         {
             int n = list.Count;
@@ -28,6 +29,13 @@ namespace Assets.Scripts
         public int Spawn;
         public float Duration;
     }
+    class AttackConfiguration
+    {
+        public AttackType Type;
+        public Transform Position;
+        public float openingTime;
+    }
+
     class AttackScheduler
     {
         // types of shots are decided in advance
@@ -37,7 +45,7 @@ namespace Assets.Scripts
         private float[] shotTypeDurations;
         private int shotSpawns = 3;
         private float difficulty;
-        private static System.Random random = new Random();
+        private static System.Random random = new System.Random();
 
         /// <summary>
         /// Returns a new scheduler.
@@ -113,9 +121,9 @@ namespace Assets.Scripts
                 return config;
             }
         }
-        public void ScheduleAttack()
+        public float ScheduleAttackOpening(float defaultOpen)
         {
-
+            return defaultOpen * (1.1f - difficulty);
         }
     }
 }

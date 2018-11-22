@@ -1,16 +1,12 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LongRangeAttacker : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+public class LongRangeAttacker : Attacker
+{
+    void Start ()
+    {
+        attackTime = 2.0f;
 	}
 }

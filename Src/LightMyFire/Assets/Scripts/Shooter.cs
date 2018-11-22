@@ -33,6 +33,7 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                // do damage
                 Destroy(gameObject);
             }
             else if (collision.gameObject.CompareTag("Boundary"))

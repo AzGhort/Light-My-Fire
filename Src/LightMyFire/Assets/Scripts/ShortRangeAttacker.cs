@@ -1,19 +1,12 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShortRangeAttacker : MonoBehaviour
+public class ShortRangeAttacker : Attacker
 {
-
-	// Use this for initialization
-	void Start ()
+    void Start ()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
+        attackTime = 1.3f;
 	}
 }
