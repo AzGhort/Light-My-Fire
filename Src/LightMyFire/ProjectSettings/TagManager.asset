@@ -13,14 +13,14 @@ TagManager:
   - UI
   - 
   - 
-  - Background
-  - Ignore collision
+  - No Physics
+  - Agent Interaction
+  - 
   - Player
   - Enemy
   - Environment
-  - Projectile
-  - Effect
   - 
+  - Standalone Layer
   - 
   - 
   - 
