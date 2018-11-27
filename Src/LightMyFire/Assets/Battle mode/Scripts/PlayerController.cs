@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-
 	public void Move(float move, bool crouch, bool jump) {
 		move *= runSpeed;
 
