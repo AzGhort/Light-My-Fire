@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,51 +15,74 @@ public class Player : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		_objects = new List<KeyValuePair<Vector2, UnityEvent>>();
+		_objects = new List<KeyValuePair<Vector2, Trigger>>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	    float right = Input.GetAxisRaw("Horizontal");
-	    float up = Input.GetAxisRaw("Vertical");
+	    if (canBeManipulated)
+	    {
+	        float right = Input.GetAxisRaw("Horizontal");
+	        float up = Input.GetAxisRaw("Vertical");
 
-	    RigidB.velocity = new Vector2(right * Speed, up * Speed);
+	        RigidB.velocity = new Vector2(right * Speed, up * Speed);
 
-	    if (Input.GetKey("e"))
-            Interact();
+	        if (Input.GetKeyDown("e"))
+	            Interact();
+        }
 	}
 
-    public void RegisterCollider(Vector2 position, UnityEvent ue)
+    public void RegisterCollider(Vector2 position, Trigger ue)
     {
-        _objects.Add(new KeyValuePair<Vector2, UnityEvent>(position, ue));
+        _objects.Add(new KeyValuePair<Vector2, Trigger>(position, ue));
     }
 
-    public void DeleteCollider(UnityEvent ue)
+    public void DeleteCollider(Trigger ue)
     {
-        _objects.RemoveAt(_objects.FindIndex(obj => obj.Value == ue));
+        int index = _objects.FindIndex(obj => obj.Value == ue);
+        if (index >= 0)
+            _objects.RemoveAt(index);
     }
 
     public void Interact()
     {
-        if (_objects.Count == 0)
-            return;
-
-        float min = float.MaxValue;
-        int k = 0;
-        for (int i = 0; i < _objects.Count; ++i)
+        if (Interlocked.CompareExchange(ref interacting, 1, 0) == 0)
         {
-            float dist = Vector2.Distance(_objects[i].Key, RigidB.position);
-            if (dist < min)
-            {
-                dist = min;
-                k = i;
-            }
-        }
+            if (_objects.Count == 0)
+                return;
 
-        _objects[k].Value.Invoke();
-        _objects.RemoveAt(k);
+            float min = float.MaxValue;
+            int k = 0;
+            for (int i = 0; i < _objects.Count; ++i)
+            {
+                float dist = Vector2.Distance(_objects[i].Key, RigidB.position);
+                if (dist < min && _objects[i].Value.Inactive == 0)
+                {
+                    min = dist;
+                    k = i;
+                }
+            }
+
+            if (Interlocked.CompareExchange(ref _objects[k].Value.Inactive, 1, 0) == 0)
+            {
+                _objects[k].Value.UE.Invoke();
+            }
+            interacting = 0;
+        }
     }
 
-    private List<KeyValuePair<Vector2, UnityEvent>> _objects;
+    public void Stop()
+    {
+        canBeManipulated = false;
+    }
+
+    public void Resume()
+    {
+        canBeManipulated = true;
+    }
+
+    private bool canBeManipulated = true;
+    private int interacting = 0;
+    private List<KeyValuePair<Vector2, Trigger>> _objects;
 }
