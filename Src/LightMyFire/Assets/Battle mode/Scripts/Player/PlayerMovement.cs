@@ -32,6 +32,8 @@ namespace TentativeMaster
 		}
 
 		private void Update() {
+			if (PauseMenu.GameIsPaused) { return; }
+
 			horizontalMove = Input.GetAxisRaw("Horizontal");
 			animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 

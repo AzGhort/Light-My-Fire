@@ -21,6 +21,7 @@ namespace TentativeMaster
 		}
 
 		private void Update() {
+			if (PauseMenu.GameIsPaused) { return; }
 			if (Input.GetButtonDown("Interact")) { interact(); };
 		}
 
