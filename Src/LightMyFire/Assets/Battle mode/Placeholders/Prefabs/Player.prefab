@@ -298,7 +298,7 @@ MonoBehaviour:
   airControl: 1
   groundMask:
     serializedVersion: 2
-    m_Bits: 524289
+    m_Bits: 557057
   groundCheck: {fileID: 4382887501210392}
   groundedCheckRadius: 0.2
   ceilingCheck: {fileID: 4943509494133296}
