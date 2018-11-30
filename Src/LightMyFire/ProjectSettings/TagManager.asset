@@ -16,18 +16,18 @@ TagManager:
   - No Physics
   - Agent Interaction
   - 
+  - 
   - Player
+  - PlayerProjectile
+  - 
   - Enemy
+  - EnemyProjectile
+  - 
+  - 
   - Environment
   - 
+  - 
   - Standalone Layer
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

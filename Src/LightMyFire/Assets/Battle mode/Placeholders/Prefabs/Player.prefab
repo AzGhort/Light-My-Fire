@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114059154903924442}
   - component: {fileID: 114143179491444310}
   - component: {fileID: 114398316702499660}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4036933563275790}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: FirePointCrouching
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4382887501210392}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4672251410547178}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: FirePointStanding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4943509494133296}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ MonoBehaviour:
   airControl: 1
   groundMask:
     serializedVersion: 2
-    m_Bits: 12289
+    m_Bits: 524289
   groundCheck: {fileID: 4382887501210392}
   groundedCheckRadius: 0.2
   ceilingCheck: {fileID: 4943509494133296}
