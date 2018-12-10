@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-namespace TentativeMaster
+namespace LightMyFire
 {
 	public class GameState
 	{

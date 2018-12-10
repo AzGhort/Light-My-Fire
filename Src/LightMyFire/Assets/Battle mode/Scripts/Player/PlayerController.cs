@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace TentativeMaster
+namespace LightMyFire
 {
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
+	[RequireComponent(typeof(Rigidbody2D))]
 	public class PlayerController : MonoBehaviour
 	{
 		[SerializeField] private float runSpeed = 40f;                              // Maximum speed
@@ -40,6 +38,7 @@ namespace TentativeMaster
 
 		private void Awake() {
 			rigidbody2d = GetComponent<Rigidbody2D>();
+			Debug.Assert(rigidbody2d);
 
 			if (OnLandEvent == null) { OnLandEvent = new UnityEvent(); }
 			if (OnCrouchEvent == null) { OnCrouchEvent = new BoolEvent(); }

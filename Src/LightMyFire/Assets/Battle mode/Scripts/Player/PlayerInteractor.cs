@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TentativeMaster
+namespace LightMyFire
 {
 	public class PlayerInteractor : MonoBehaviour
 	{

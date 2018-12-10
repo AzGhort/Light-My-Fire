@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
 
-using UnityEngine;
-
-namespace TentativeMaster
+namespace LightMyFire
 {
 	public class DropPlatforms : MonoBehaviour
 	{
 
 		[SerializeField] private GameObject platforms;
 
-		private Interactible interactible;
 		private int standAloneLayerId;
 
 		public void StartScript() {
@@ -25,13 +21,11 @@ namespace TentativeMaster
 			Destroy(gameObject);
 		}
 
-		private void Start() {
+		private void Awake() {
 			standAloneLayerId = LayerMask.NameToLayer("Standalone Layer");
-			interactible = gameObject.GetComponent<Interactible>();
 
 			Debug.Assert(standAloneLayerId != -1);
-			Debug.Assert(interactible != null);
-			Debug.Assert(platforms != null);
+			Debug.Assert(platforms);
 		}
 
 	}

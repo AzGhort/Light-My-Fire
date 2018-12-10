@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
 
 // TODO Cheated by ProjectSettings -> Script order execution (PlayerController before PlayerMovement)
 
-namespace TentativeMaster
+namespace LightMyFire
 {
+	[RequireComponent(typeof(Animator))]
 	public class PlayerMovement : MonoBehaviour
 	{
 
@@ -27,8 +25,9 @@ namespace TentativeMaster
 		}
 
 
-		private void Start() {
+		private void Awake() {
 			animator = GetComponent<Animator>();
+			Debug.Assert(animator);
 		}
 
 		private void Update() {

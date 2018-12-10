@@ -28,6 +28,8 @@ GameObject:
   - component: {fileID: 114059154903924442}
   - component: {fileID: 114143179491444310}
   - component: {fileID: 114398316702499660}
+  - component: {fileID: 114131401789089078}
+  - component: {fileID: 114612724748592820}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -254,6 +256,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 114451881850923856}
+--- !u!114 &114131401789089078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040852496261982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5329962ce3ae4644ae1bea1114eba1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthBar:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: BarPercent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onChangeHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114612724748592820}
+        m_MethodName: ChangeOfHealthHandler
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114143179491444310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,8 +389,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: TentativeMaster.BoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: LightMyFire.BoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114612724748592820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040852496261982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0c9d2909bb8b448853b05831463b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSeconds: 0.25
+  healthReduced: {r: 1, g: 0.7529412, b: 0.7529412, a: 1}
+  healthRecovered: {r: 0.5613208, g: 1, b: 0.6183392, a: 1}
 --- !u!212 &212775560063159910
 SpriteRenderer:
   m_ObjectHideFlags: 1

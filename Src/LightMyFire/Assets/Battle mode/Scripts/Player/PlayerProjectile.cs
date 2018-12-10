@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
 
-using UnityEngine;
-
-namespace TentativeMaster
+namespace LightMyFire
 {
+	[RequireComponent(typeof(Rigidbody2D))]
 	public class PlayerProjectile : MonoBehaviour
 	{
 		[SerializeField] private GameObject impactEffect;
@@ -13,16 +11,18 @@ namespace TentativeMaster
 
 		private Rigidbody2D rigidbody2d;
 
-		private void Start() {
+		private void Awake() {
 			rigidbody2d = GetComponent<Rigidbody2D>();
+			Debug.Assert(rigidbody2d);
+
 			rigidbody2d.velocity = transform.right * speed;
 		}
 
 		private void OnTriggerEnter2D(Collider2D collision) {
 			// Do not destroy on potential hit of player (because of lag/etc)
-			if (collision.CompareTag("Player")) { return; }	
-			
-			Enemy enemy = collision.GetComponent<Enemy>();
+			if (collision.CompareTag("Player")) { return; }
+
+			var enemy = collision.GetComponent<EnemyHealthManager>();
 			if (enemy) { enemy.TakeDamage(damage); }
 
 			Instantiate(impactEffect, transform.position, transform.rotation);
