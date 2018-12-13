@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LightMyFire
 {
-	public class PauseMenu : MonoBehaviour
-	{
+	public class PauseMenu : MonoBehaviour {
 		public static bool GameIsPaused = false;
 
 		[SerializeField] private GameObject pauseMenuUi;
+		[SerializeField] private SceneField mainMenuScene;
 
 		private void Update() {
 			if (Input.GetButtonDown("Pause")) {
@@ -25,6 +26,12 @@ namespace LightMyFire
 			Time.timeScale = 0f;
 			pauseMenuUi.SetActive(true);
 			GameIsPaused = true;
+		}
+
+		public void LoadMenu() {
+			Time.timeScale = 1f;
+			GameIsPaused = false;
+			SceneManager.LoadScene(mainMenuScene);
 		}
 
 		public void QuitGame() {
