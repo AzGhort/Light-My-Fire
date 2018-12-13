@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Battle mode/Scenes/VojtaCommit.unity
+    guid: ab69179bfa1291644a403d27fa76190d
+  - enabled: 0
+    path: Assets/Battle mode/Scenes/Rat fight.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/UI/Scenes/MainMenu.unity
+    guid: 68d15401b795d73409cfe4e3267ca222
   m_configObjects: {}
