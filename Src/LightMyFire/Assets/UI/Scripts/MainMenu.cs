@@ -10,15 +10,15 @@ namespace LightMyFire
 		[SerializeField] private SceneField aboutScene;
 
 		public void LoadNewGameScene() {
-			SceneManager.LoadScene(newGameScene);
+			LevelChangerSingleton.LoadScene(newGameScene);
 		}
 
 		public void LoadControlsScene() {
-			SceneManager.LoadScene(controlsScene);
+			LevelChangerSingleton.LoadScene(controlsScene);
 		}
 
 		public void LoadAboutScene() {
-			SceneManager.LoadScene(aboutScene);
+			LevelChangerSingleton.LoadScene(aboutScene);
 		}
 
 		public void QuitGame() {

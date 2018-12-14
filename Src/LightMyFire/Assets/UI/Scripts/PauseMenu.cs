@@ -31,7 +31,7 @@ namespace LightMyFire
 		public void LoadMenu() {
 			Time.timeScale = 1f;
 			GameIsPaused = false;
-			SceneManager.LoadScene(mainMenuScene);
+			LevelChangerSingleton.LoadScene(mainMenuScene);
 		}
 
 		public void QuitGame() {

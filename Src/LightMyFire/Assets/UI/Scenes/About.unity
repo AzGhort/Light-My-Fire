@@ -782,6 +782,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1501551200
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415351745040338, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114645443537077352, guid: 34e0d062ce0fdf04281f9ea7835fb3f7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114645443537077352, guid: 34e0d062ce0fdf04281f9ea7835fb3f7,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34e0d062ce0fdf04281f9ea7835fb3f7, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1682317340
 GameObject:
   m_ObjectHideFlags: 0

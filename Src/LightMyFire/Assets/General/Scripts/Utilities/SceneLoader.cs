@@ -8,7 +8,7 @@ namespace LightMyFire
 		[SerializeField] private SceneField scene;
 
 		public void LoadScene() {
-			SceneManager.LoadScene(scene);
+			LevelChangerSingleton.LoadScene(scene);
 		}
 	}
 }
