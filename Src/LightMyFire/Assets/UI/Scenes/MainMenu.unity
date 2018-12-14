@@ -1251,8 +1251,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene:
-    sceneAsset: {fileID: 102900000, guid: ab69179bfa1291644a403d27fa76190d, type: 3}
-    sceneName: Battle mode/Scenes/VojtaCommit
+    sceneAsset: {fileID: 102900000, guid: 0f74c5cfdff52dc4ebc61256c6ed07ba, type: 3}
+    sceneName: Casual mode/Scenes/IntroText
   controlsScene:
     sceneAsset: {fileID: 102900000, guid: 7966239866e351742b145604ad5ab283, type: 3}
     sceneName: UI/Scenes/Controls
@@ -1471,6 +1471,48 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &1255802499
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201202587471244, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1cb6dd8d45fca14fb76db6885a680ed, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1256303924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,43 +1986,3 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &2142093058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2142093060}
-  - component: {fileID: 2142093059}
-  m_Layer: 0
-  m_Name: SingletonInit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2142093059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2142093058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aeb7f6b190584e48b5cb7e7a79deb1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2142093060
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2142093058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

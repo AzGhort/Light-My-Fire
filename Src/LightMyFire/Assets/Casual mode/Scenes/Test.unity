@@ -284,8 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1757722885974418, guid: b286f7f1cf0155f4baee1af8d2495533,
     type: 2}
-  firePointStanding: {fileID: 1199690109}
-  firePointCrouching: {fileID: 1837259135}
+  firePoint: {fileID: 0}
 --- !u!114 &959874869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +492,7 @@ SpriteRenderer:
   m_Size: {x: 0.33, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &959874876
@@ -512,7 +511,7 @@ Transform:
   - {fileID: 1199690109}
   - {fileID: 1837259135}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199690108
 GameObject:
@@ -660,7 +659,7 @@ Transform:
   m_LocalScale: {x: 19.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1765095979
 BoxCollider2D:
