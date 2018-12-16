@@ -1,0 +1,51 @@
+﻿1 * _
+Odpadky. Vždycky jsi něma pohrdal, ale teď by ti ten obal od Margotky mohl být nápomocnej. Je to ponižující, ale tobě už moc hrdosti nezbývá.
+* 2
+Čau. Dostal jsem se do takové šlamastiky. Myslíš, že bys mi mohl trochu píchnout?
+* 3
+Zdar, ty papíre ušmudlanej. Pohni se mi tady o kousek a schovej mě pod ten svůj fešnej pláštík.
+
+2 4 Margoťák
+Wow...
+
+3 5 Margoťák
+Co děláš, ty násilnickej magore?!
+
+4 * Margoťák
+Seš asi dost v průšvihu. Blbý, co?
+* 6
+Nic moc.
+* 6
+Klídek, nestojím o problémy.
+* 5
+Nestojím o tvoje blbý kecy. Tohle si ke mně nedovoluj!
+
+5 KrysaFight
+
+6 * Margoťák
+V pohodě. (Zírá na tebe jako magor.) Tak na co čekáš? Pojď, je to trapný pro nás oba, ale do smrti bych si vyčítal, kdybych tě tady nechal rozmočit.
+* 7
+Nebuď tak měkkej, Margoťáku.
+* 12
+(Běžet se schovat)
+
+7 8 Margoťák
+Měkkej? Říkáš mi, že jsem měkkej a přitom víš o měkkosti velkej prd. Víš, já tam byl, ...
+
+8 9 Margoťák
+Zažil jsem ty parný léta, kdy ležíš se svejma kámošema vyskládanej v krabici od žvýkaček vedle pokladny ve večerce.
+
+9 * Margoťák
+Ležíš a čekáš, až si tě někdo koupí, ale pak přijde poledne. A věř, že poledne vždycky přijde. A tvůj brácha vedle má tu smůlu, že leží na slunci, a začne se škvařit, roztýká se a je... je měkkej.
+* 10
+Kámo, seber se a přestaň fňukat.
+* 11
+Promiň, Margoťáku.
+
+10 5 Margoťák
+Zmlkni!! Nikdy jsi nezažil roztýkání. Je to jako když chceš stát, ale můžeš jenom ležet. Je to jako když... (vrazil ti)
+
+11 12 Margoťák
+(Nelibě uvolní místo a ty se běžíš schovat)
+
+12 Hidden

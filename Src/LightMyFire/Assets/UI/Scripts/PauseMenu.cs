@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace LightMyFire
 {
 	public class PauseMenu : MonoBehaviour {
 		public static bool GameIsPaused = false;
+		public static bool PauseProhibited = true;
 
 		[SerializeField] private GameObject pauseMenuUi;
 		[SerializeField] private SceneField mainMenuScene;
 
 		private void Update() {
-			if (Input.GetButtonDown("Pause")) {
+			if (!PauseProhibited && Input.GetButtonDown("Pause")) {
 				if (GameIsPaused) { ResumeGame(); }
 				else { PauseGame(); }
 			}

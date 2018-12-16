@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Casual mode/Scenes/IntroText.unity
     guid: 0f74c5cfdff52dc4ebc61256c6ed07ba
   - enabled: 1
+    path: Assets/Casual mode/Scenes/MainStreet.unity
+    guid: cdb92546ef83f9546af0d6e343fdce6d
+  - enabled: 1
     path: Assets/Battle mode/Scenes/VojtaCommit.unity
     guid: ab69179bfa1291644a403d27fa76190d
   m_configObjects: {}

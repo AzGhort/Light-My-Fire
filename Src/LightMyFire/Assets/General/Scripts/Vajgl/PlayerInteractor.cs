@@ -21,7 +21,7 @@ namespace LightMyFire
 
 		private void Update() {
 			if (PauseMenu.GameIsPaused) { return; }
-			if (Input.GetButtonDown("Interact")) { interact(); };
+			if (!GameState.PlayerFrozen && Input.GetButtonDown("Interact")) { interact(); };
 		}
 
 		// Invokes last added event

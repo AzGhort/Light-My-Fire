@@ -46,7 +46,6 @@ namespace LightMyFire
 
 			horizontalMovement = Input.GetAxisRaw("Horizontal");
 			if (Input.GetButtonDown("Jump")) { jump = true; }
-			//jump = Input.GetButtonDown("Jump") ? true : false;
 		}
 
 		private void FixedUpdate() {

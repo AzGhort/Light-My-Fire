@@ -15,6 +15,18 @@ namespace LightMyFire
 			OnLoadSceneComplete();
 		}
 
+		public void AnimationStopInput() {
+			Debug.Log("LevelChanger - Stopped other input");
+			GameState.PlayerFrozen = true;
+			PauseMenu.PauseProhibited = true;
+		}
+
+		public void AnimationAllowInput() {
+			Debug.Log("LevelChanger - Allowed other input");
+			GameState.PlayerFrozen = false;
+			PauseMenu.PauseProhibited = false;
+		}
+
 		public static void LoadScene(SceneField scene) {
 			animator.SetTrigger("FadeOut");
 			sceneToLoad = scene;
