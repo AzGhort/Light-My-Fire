@@ -20,10 +20,13 @@ namespace LightMyFire
 
 		private void OnTriggerEnter2D(Collider2D collision) {
 			// Do not destroy on potential hit of player (because of lag/etc)
-			if (collision.CompareTag("Player")) { return; }
+			if (collision.CompareTag("Player") || collision.CompareTag("MeleeAttack")) { return; }
 
 			var enemy = collision.GetComponent<EnemyHealthManager>();
 			if (enemy) { enemy.TakeDamage(damage); }
+
+			var pipe = collision.GetComponent<PipeHealthManager>();
+			if (pipe) { pipe.TakeDamage(damage); }
 
 			Instantiate(impactEffect, transform.position, transform.rotation);
 			Destroy(gameObject);

@@ -11,6 +11,10 @@ namespace LightMyFire
 		[SerializeField] private Object sceneAsset;
 		[SerializeField] private string sceneName = "";
 
+		public SceneField(string sceneName) {
+			this.sceneName = sceneName;
+		}
+
 		public string SceneName {
 			get { return sceneName; }
 		}

@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
 namespace LightMyFire
 {
@@ -9,10 +6,9 @@ namespace LightMyFire
 	public class PlayerController : MonoBehaviour
 	{
 		[SerializeField] private float runSpeed = 40f;                              // Maximum speed
-		[SerializeField] [Range(0, .3f)] private float movementSmoothing = .05f;    // How much to smooth out the movement
-
 		[SerializeField] private float jumpForce = 700f;            // Amount of force added when the player jumps.
-		[SerializeField] private bool airControl = true;            // Whether or not a player can steer while jumping;
+
+		[SerializeField] [Range(0, .3f)] private float movementSmoothing = .05f;    // How much to smooth out the movement
 
 		[SerializeField] private LayerMask groundMask;              // A mask determining what is ground to the character
 		[SerializeField] private Transform groundCheck;             // A position marking where to check if the player is grounded
@@ -87,9 +83,7 @@ namespace LightMyFire
 			animator.SetFloat("Speed", Mathf.Abs(rigidbody2d.velocity.x));
 
 			// Flip player if movement direction is different than current orientation
-			if (isGrounded || airControl) {
-				if ((xTargetVelocity > 0 && !isFacingRight) || (xTargetVelocity < 0 && isFacingRight)) { Flip(); }
-			}
+			if ((xTargetVelocity > 0 && !isFacingRight) || (xTargetVelocity < 0 && isFacingRight)) { Flip(); }
 
 			//Add a vertical force to the player => jump
 			if (isGrounded && jump) {

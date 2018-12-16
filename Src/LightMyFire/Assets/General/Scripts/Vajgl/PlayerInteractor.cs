@@ -15,8 +15,7 @@ namespace LightMyFire
 		}
 
 		public void DeleteCollider(UnityEvent uEvent) {
-			var result = events.Remove(uEvent);
-			Debug.Assert(result);   // Deleting event that is not in list => unwanted call
+			events.Remove(uEvent);
 		}
 
 		private void Update() {
@@ -27,7 +26,9 @@ namespace LightMyFire
 		// Invokes last added event
 		private void interact() {
 			if (events.Count != 0) {
-				events[events.Count - 1].Invoke();
+				var lastEvent = events[events.Count - 1];
+				events.RemoveAt(events.Count - 1);
+				lastEvent.Invoke();
 			}
 		}
 	}

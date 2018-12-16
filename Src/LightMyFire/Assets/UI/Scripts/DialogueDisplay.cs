@@ -51,13 +51,15 @@ namespace LightMyFire
 			writeSentence(currentSentence);
 		}
 
-		public void StartPopUp(string popUp) {
-			textField.text = popUp;
-			animator.SetTrigger("StartPopUp");
+		public void StartPopUp(string actor, string popUpText) {
+			actorName.text = actor;
+			textField.text = popUpText;
+			animator.SetBool("PopUpEnd", false);
+			animator.SetTrigger("PopUpStart");
 		}
 
 		public void EndPopUp() {
-			animator.SetTrigger("EndPopUp");
+			animator.SetBool("PopUpEnd", true);
 		}
 
 		public void StartDialogue(TextAsset dialogueText) {
@@ -67,7 +69,7 @@ namespace LightMyFire
 			currentSentence = sentences[1];
 			writeSentence(currentSentence);
 
-			animator.SetTrigger("Start");
+			animator.SetTrigger("DialogueStart");
 			GameState.PlayerFrozen = true;
 		}
 
@@ -120,7 +122,7 @@ namespace LightMyFire
 			if (sentence.text == null) {
 				dialogueRunning = false;
 
-				animator.SetTrigger("End");
+				animator.SetTrigger("DialogueEnd");
 				GameState.PlayerFrozen = false;
 
 				dialogResultString.Invoke(sentence.endInfo);
