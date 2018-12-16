@@ -22,9 +22,9 @@ namespace LightMyFire
 				vajgl.transform.position = canalEntry.position;
 			}
 
-			if (GameState.MainStreetNarratorVisited) { narrator.SetActive(false); }
-
 			GameState.LastSceneName = SceneManager.GetActiveScene().name;
+
+			if (GameState.MainStreetNarratorVisited) { narrator.SetActive(false); }
 		}
 	}
 }

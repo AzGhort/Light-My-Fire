@@ -15,10 +15,10 @@ namespace LightMyFire
 		}
 
 		void Start() {
-			StartCoroutine(RevealCharacters(tmpText));
+			StartCoroutine(revealCharacters(tmpText));
 		}
 
-		IEnumerator RevealCharacters(TMP_Text textComponent) {
+		private IEnumerator revealCharacters(TMP_Text textComponent) {
 			int totalCharacters = textComponent.textInfo.characterCount;
 			int visibleCharacters = 0;
 

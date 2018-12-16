@@ -760,7 +760,6 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 45d0dfb6ac88d854c9544b016e62c134, type: 3}
     sceneName: Battle mode/Scenes/RatFight
   ohryzek: {fileID: 2019082412}
-  mainStreetEntrancePopUp: {fileID: 1485372801}
 --- !u!114 &1980651439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +780,7 @@ MonoBehaviour:
   mainStreetEntry: {fileID: 1101956038}
   ratFightEntry: {fileID: 1482926653}
   vajgl: {fileID: 765887159}
+  ohryzek: {fileID: 2019082412}
 --- !u!1 &2019082412
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +891,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  repeatableEnter: 0
+  repeatableEnter: 1
   repeatableLeave: 0
   repeatEnterDelay: 0
   repeatLeaveDelay: 0

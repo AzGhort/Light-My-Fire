@@ -12,6 +12,7 @@ namespace LightMyFire
 		[SerializeField] private Transform ratFightEntry;
 
 		[SerializeField] private GameObject vajgl;
+		[SerializeField] private GameObject ohryzek;
 
 		private void Start() {
 			string lastSceneName = GameState.LastSceneName;
@@ -23,6 +24,8 @@ namespace LightMyFire
 			}
 
 			GameState.LastSceneName = SceneManager.GetActiveScene().name;
+
+			if (GameState.KilledRat) { ohryzek.SetActive(false); }
 		}
 	}
 }
