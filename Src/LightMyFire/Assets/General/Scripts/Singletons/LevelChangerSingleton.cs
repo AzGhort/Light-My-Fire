@@ -5,75 +5,80 @@ using UnityEngine.SceneManagement;
 
 namespace LightMyFire
 {
-	public class LevelChangerSingleton : Singleton<LevelChangerSingleton>
-	{
-		private static Animator animator = null;
-		private static SceneField sceneToLoad = null;
+    public class LevelChangerSingleton : Singleton<LevelChangerSingleton>
+    {
+        private static Animator animator = null;
+        private static SceneField sceneToLoad = null;
 
-		// Animation events cant use static methods... 
-		public void AnimationOnSceneLoadComplete() {
-			OnLoadSceneComplete();
-		}
+        public static bool Loading = true;
 
-		public void AnimationStopInput() {
-			Debug.Log("LevelChanger - Stopped other input");
-			GameState.PlayerFrozen = true;
-			PauseMenu.PauseProhibited = true;
-		}
+        // Animation events cant use static methods... 
+        public void AnimationOnSceneLoadComplete() {
+            OnLoadSceneComplete();
+        }
 
-		public void AnimationAllowInput() {
-			Debug.Log("LevelChanger - Allowed other input");
-			GameState.PlayerFrozen = false;
-			PauseMenu.PauseProhibited = false;
-		}
+        public void AnimationStopInput() {
+            Debug.Log("LevelChanger - Stopped other input");
+            GameState.PlayerFrozen = true;
+            PauseMenu.PauseProhibited = true;
+        }
 
-		public static void LoadScene(SceneField scene) {
-			animator.SetTrigger("FadeOut");
-			sceneToLoad = scene;
-		}
+        public void AnimationAllowInput() {
+            Debug.Log("LevelChanger - Allowed other input");
+            GameState.PlayerFrozen = false;
+            PauseMenu.PauseProhibited = false;
+            Loading = false;
+        }
 
-		public static void OnLoadSceneComplete() {
-			//StartCoroutine("coOnFadeComplete");
-			SceneManager.LoadScene(sceneToLoad);
-		}
+        public static void LoadScene(SceneField scene) {
+            if (Loading) { return; }
+            Loading = true;
+            animator.SetTrigger("FadeOut");
+            sceneToLoad = scene;
+        }
 
-		public static void FadeIn() {
-			animator.SetTrigger("FadeIn");
-		}
+        public static void OnLoadSceneComplete() {
+            //StartCoroutine("coOnFadeComplete");
+            SceneManager.LoadScene(sceneToLoad);
+        }
 
-		public static void FadeOut() {
-			animator.SetTrigger("FadeOut");
-		}
+        public static void FadeIn() {
+            animator.SetTrigger("FadeIn");
+        }
 
-		// Makes sure that object will live only as singleton
-		protected LevelChangerSingleton() { }
+        public static void FadeOut() {
+            animator.SetTrigger("FadeOut");
+        }
 
-		private void Awake() {
-			Debug.Log("Awoke Singleton Instance: " + gameObject.GetInstanceID());
+        // Makes sure that object will live only as singleton
+        protected LevelChangerSingleton() { }
 
-			animator = Instance.GetComponent<Animator>();
-			Debug.Assert(animator);
+        private void Awake() {
+            Debug.Log("Awoke Singleton Instance: " + gameObject.GetInstanceID());
 
-			SceneManager.sceneLoaded += onLevelFinishedLoading;
-		}
-		
-		private static void onLevelFinishedLoading(Scene scene, LoadSceneMode mode) { FadeIn(); }
+            animator = Instance.GetComponent<Animator>();
+            Debug.Assert(animator);
 
-		// Async loading for bigger scenes if necessary
+            SceneManager.sceneLoaded += onLevelFinishedLoading;
+        }
 
-		private static AsyncOperation aop = null;
+        private static void onLevelFinishedLoading(Scene scene, LoadSceneMode mode) { FadeIn(); }
 
-		private static IEnumerator coOnFadeComplete() {
-			while (aop.progress < 0.9f) {
-				yield return null;
-			}
-			aop.allowSceneActivation = true;
-		}
+        // Async loading for bigger scenes if necessary
 
-		private static IEnumerator coLoadScene() {
-			aop = SceneManager.LoadSceneAsync(sceneToLoad);
-			aop.allowSceneActivation = false;
-			yield return aop;
-		}
-	}
+        private static AsyncOperation aop = null;
+
+        private static IEnumerator coOnFadeComplete() {
+            while (aop.progress < 0.9f) {
+                yield return null;
+            }
+            aop.allowSceneActivation = true;
+        }
+
+        private static IEnumerator coLoadScene() {
+            aop = SceneManager.LoadSceneAsync(sceneToLoad);
+            aop.allowSceneActivation = false;
+            yield return aop;
+        }
+    }
 }
