@@ -28,7 +28,6 @@ namespace LightMyFire
         }
 
         private void Update() {
-            if (LevelChangerSingleton.Loading) { return; }
             if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Interact")) {
                 EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
             }
