@@ -1,0 +1,10 @@
+1 2 Ohryzek
+Hej, kámo, ty ses přilepil?!
+
+2 3 Ohryzek
+Tohle není dobrý... sakra kámo, slyšíš to pištění?
+
+3 4 Ohryzek
+N-nee, to ssnad nn-e, je to krysa!
+
+4 RatFight

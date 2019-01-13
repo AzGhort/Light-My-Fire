@@ -1,0 +1,10 @@
+1 * Ohryzek
+Tak co zachráníš mě prosím?
+* 2
+Nespěchej tolik, ještě se tu porozhlídnu trochu víc.
+* 3
+To víš, že jo, jsem připravenej - sundám ty krysy jak nic!
+
+2 LookAgain
+
+3 RatFight

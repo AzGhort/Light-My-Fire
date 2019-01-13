@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Casual mode/Scenes/MainStreet.unity
     guid: cdb92546ef83f9546af0d6e343fdce6d
   - enabled: 1
+    path: Assets/Casual mode/Scenes/SideStreet.unity
+    guid: 075a7fc97c42ce0458080c3643573846
+  - enabled: 1
     path: Assets/Casual mode/Scenes/Canal.unity
     guid: 7e02ddf0155963041a4e1c93f84bc39a
   - enabled: 1

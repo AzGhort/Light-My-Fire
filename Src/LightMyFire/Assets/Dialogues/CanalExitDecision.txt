@@ -1,0 +1,10 @@
+1 * Hlavní ulice
+Chceš zbaběle zdrhnout?
+* 2
+(ANO) Adios magore!
+* 3
+(NE) Jsem sice mizernej vajgl, ale někde hluboko mezi zbytkama tabáku je ještě trocha hrdosti.
+
+2 LetDieAndEscape
+
+3 Nothing

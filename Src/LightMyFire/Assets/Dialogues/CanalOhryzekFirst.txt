@@ -1,0 +1,22 @@
+﻿1 2 _
+(Nerozeznatelné chraptění) "Eeeh... pomoc...""
+
+2 3 _
+(Zoufalý výkřik) "Hej, ty tam...! Stůj... Vidím tě."
+
+3 4 Ohryzek
+Nenechávej mě tady! PROSÍM! Nemůžeš mě tady nechat! Je to tam hrozný. Tttttttam dál... dál v hlubinách... v těch proklatejch tunelech. Kanálový krysy to tam ovládly. Jsou šílený. Užívaj si vraždění. Každej, kdo se k nim přiblíží, skončí rozkousanej na cucky. Vyžívaj se v tom. Vážně, věř mi. Já tam totiž byl a viděl ty jejich tesáky a tlamy od šťávy a...
+
+4 5 Ohryzek
+(Propuká v pláč) Většina té zeleniny... byli to moji kámoši. A teď?! Kusy natí tam leží rozervaný a hnijou na hromádce. Žádná úcta k mrtvejm. To ty krysy neznaj, to ti povídám.
+
+5 * Ohryzek
+Zachraň mě prosím... Vypadáš jako drsnej chlápek a já mám rodinu. Moje jadýrka padly na úrodnou půdu, jestli mi rozumíš... Sundej tu krysu a budu ti nadosmrti vděčněj!
+* 6
+Hej brzdi! Nejdřív se tu musím trochu rozhlídnout. Nebudu nasazovat kejhák, když nemám zmapovanej terén.
+* 7
+Už ani slovo! Sundám je jak nic!
+
+6 LookAround
+
+7 RatFight
