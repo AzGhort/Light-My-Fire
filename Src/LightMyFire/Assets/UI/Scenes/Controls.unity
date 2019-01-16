@@ -289,7 +289,7 @@ MonoBehaviour:
   m_text: "Zp\u011Bt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cdf57d23633cc9b4a95269e6a9e509b7, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 6d487a474a2df3d43bfce50002a51043, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: b30c6af0a1f2d8c48acaec022e5675f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: efb0df63a587b3d4bb25ce8c130e269c, type: 2}
+  m_Material: {fileID: 2100000, guid: 6067ba0550086c7448ee81d00672eb5b, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmproText: {fileID: 69315847}
-  highlightMaterial: {fileID: 2100000, guid: bee62f95396e5874c9d78a99104bb79d, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: 1a98ae040a92d5d4aaa6ad84bb54ea16, type: 2}
 --- !u!114 &288063679
 MonoBehaviour:
   m_ObjectHideFlags: 0
