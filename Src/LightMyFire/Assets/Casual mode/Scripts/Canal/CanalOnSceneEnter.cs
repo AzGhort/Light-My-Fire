@@ -12,6 +12,7 @@ namespace LightMyFire
         [SerializeField] private Transform ratFightEntry;
 
         [SerializeField] private GameObject vajgl;
+        [SerializeField] private GameObject rat;
         [SerializeField] private GameObject ohryzek;
         [SerializeField] private GameObject bubbleGum;
 
@@ -26,9 +27,11 @@ namespace LightMyFire
 
             GameState.LastSceneName = SceneManager.GetActiveScene().name;
 
-            if (GameState.KilledRat || GameState.DeadOhryzek) {
+            if (GameState.DeadOhryzek || GameState.RatKilled) {
                 ohryzek.SetActive(false);
                 bubbleGum.SetActive(false);
+
+                if (!GameState.RatKilled) { rat.SetActive(true); }
             }
         }
     }

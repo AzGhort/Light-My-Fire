@@ -8,7 +8,7 @@ namespace LightMyFire
 		[SerializeField] private SceneField onDeathScene;
 
 		public void OnVictory() {
-			GameState.KilledRat = true;
+			GameState.RatKilled = true;
 			LevelChangerSingleton.LoadScene(onVictoryScene);
 		}
 

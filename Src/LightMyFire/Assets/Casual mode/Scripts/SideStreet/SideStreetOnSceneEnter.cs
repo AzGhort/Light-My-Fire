@@ -11,7 +11,10 @@ namespace LightMyFire
 		[SerializeField] private Transform mainStreetEntry;
 		[SerializeField] private Transform margotakFightEntry;
 
+        [SerializeField] private GameObject rain;
 		[SerializeField] private GameObject vajgl;
+        [SerializeField] private GameObject containerGlass;
+        [SerializeField] private GameObject margotak;
 
 		private void Start() {
 			string lastSceneName = GameState.LastSceneName;
@@ -23,6 +26,10 @@ namespace LightMyFire
 			}
 
 			GameState.LastSceneName = SceneManager.GetActiveScene().name;
+
+            if (!GameState.DeadOhryzek && !GameState.RatKilled) { containerGlass.SetActive(false); }
+            if (GameState.MargotakKilled || !GameState.MargotakSideStreet) { margotak.SetActive(false); }
+            if (GameState.Raining) { rain.SetActive(true); }
 		}
     }
 }

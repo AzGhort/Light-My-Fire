@@ -1,0 +1,16 @@
+1 2 Margoťák
+Viděl jsem všechno... Chci říct slyšel...
+
+2 3 Margoťák
+Vím, co jsi udělal ohryzkovi. Byl to můj kámoš, znal jsem se s jeho mámou ze sámošky.
+
+3 4 Margoťák
+Seš pěkná krysa! Teda vajgl. Vajgl krysa! Rozumíš mi? Jsi vajgl, ale povahou jsi krysa.
+
+4 5 Margoťák
+Jakože jsi podvraťák. Ne pes, ale krysa. Chápeš?
+
+5 6 Margoťák
+A teď pomstím svýho kámoše, ty kryso! Vajgle!
+
+6 MargotFight

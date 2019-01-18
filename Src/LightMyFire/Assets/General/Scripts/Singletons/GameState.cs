@@ -10,9 +10,13 @@ namespace LightMyFire
 		public static bool PlayerFrozen = false;
 
 		public static bool MainStreetNarratorVisited = false;
-        public static bool RainOver = false;
+        public static bool Raining = false;
 
-		public static bool KilledRat = false;
+        public static bool MargotakKilled = false;
+        public static bool MargotakMainStreet = true;
+        public static bool MargotakSideStreet = false;
+
+		public static bool RatKilled = false;
         public static bool DeadOhryzek = false;
 
 		public static void ResetGameProgress() {
@@ -21,8 +25,13 @@ namespace LightMyFire
             PlayerFrozen = false;
 
 			MainStreetNarratorVisited = false;
+            Raining = false;
 
-			KilledRat = false;
+            MargotakKilled = false;
+            MargotakMainStreet = true;
+            MargotakSideStreet = false;
+
+			RatKilled = false;
             DeadOhryzek = false;
 		}
 	}

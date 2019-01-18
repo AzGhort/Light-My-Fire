@@ -33,6 +33,8 @@ namespace LightMyFire
             }
             else if (result == "LetDieAndEscape") {
                 Debug.Log("Dialog result handled - LetDieAndEscape");
+                GameState.MargotakMainStreet = false;
+                GameState.MargotakSideStreet = true;
                 GameState.DeadOhryzek = true;
                 LevelChangerSingleton.LoadScene(mainStreetScene);
             }

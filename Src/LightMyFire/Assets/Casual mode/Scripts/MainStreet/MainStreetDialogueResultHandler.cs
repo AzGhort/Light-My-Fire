@@ -5,6 +5,7 @@ namespace LightMyFire
 	public class MainStreetDialogueResultHandler : MonoBehaviour
 	{
 		[SerializeField] private SceneField margotFightScene;
+        [SerializeField] private SceneField mainStreet;
 
 		private void Start() {
 			FindObjectOfType<DialogueDisplay>().AddListener(handleDialogueResult);
@@ -16,6 +17,9 @@ namespace LightMyFire
 			}
 			else if (result == "MargotHidden") {
 				Debug.Log("Dialog result handled - MargotHidden");
+                GameState.Raining = false;
+                GameState.MargotakMainStreet = false;
+                LevelChangerSingleton.LoadScene(mainStreet);
 			}
 		}
 	}
