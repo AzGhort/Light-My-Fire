@@ -14,6 +14,9 @@ namespace LightMyFire
         [SerializeField] private Sprite damaged1;
         [SerializeField] private Sprite damaged2;
         [SerializeField] private Sprite damaged3;
+
+        [SerializeField] private GameObject arrowsGuide;
+
         SpriteRenderer spriteRenderer;
 
         private float currentHealth;
@@ -59,8 +62,9 @@ namespace LightMyFire
                 var roots = gameObject.scene.GetRootGameObjects();
                 foreach (GameObject go in roots)
                 {
-                    if (go.name == "DropPlatformsButton")
+                    if (go.name == "DropPlatformsTap")
                     {
+                        arrowsGuide.SetActive(false);
                         go.SetActive(true);
                     }
                 }

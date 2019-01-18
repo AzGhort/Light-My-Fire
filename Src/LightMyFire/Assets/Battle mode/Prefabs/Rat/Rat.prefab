@@ -9,53 +9,16 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1076106311044256}
+  m_RootGameObject: {fileID: 1832878977660494}
   m_IsPrefabAsset: 1
---- !u!1 &1076106311044256
+--- !u!1 &1124867962176548
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4576155676298888}
-  - component: {fileID: 212326203370122918}
-  - component: {fileID: 50001485618136830}
-  - component: {fileID: 61646827213806330}
-  - component: {fileID: 114779381638345242}
-  - component: {fileID: 95206561529085800}
-  - component: {fileID: 114723077937045288}
-  - component: {fileID: 114531899282514072}
-  m_Layer: 15
-  m_Name: Rat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1282115452280918
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4454153242576248}
-  m_Layer: 15
-  m_Name: LongRangeAttackSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1960510038164748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4575566352233248}
+  - component: {fileID: 4908287331473710}
   m_Layer: 15
   m_Name: ShortRangeAttackSpawn
   m_TagString: Untagged
@@ -63,54 +26,91 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4454153242576248
+--- !u!1 &1699812229148530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4662902131321090}
+  m_Layer: 15
+  m_Name: LongRangeAttackSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1832878977660494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4638670957295026}
+  - component: {fileID: 212561372418731214}
+  - component: {fileID: 50763623910126178}
+  - component: {fileID: 61769360803195824}
+  - component: {fileID: 114560236758512640}
+  - component: {fileID: 95224401018220792}
+  - component: {fileID: 114434759707260258}
+  - component: {fileID: 114672197178157810}
+  m_Layer: 15
+  m_Name: Rat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4638670957295026
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1282115452280918}
+  m_GameObject: {fileID: 1832878977660494}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
+  m_LocalPosition: {x: -10.41, y: 6.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4662902131321090}
+  - {fileID: 4908287331473710}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
+--- !u!4 &4662902131321090
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699812229148530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.8, y: -0.2, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
-  m_Father: {fileID: 4576155676298888}
+  m_Father: {fileID: 4638670957295026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4575566352233248
+--- !u!4 &4908287331473710
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1960510038164748}
+  m_GameObject: {fileID: 1124867962176548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.3, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
-  m_Father: {fileID: 4576155676298888}
+  m_Father: {fileID: 4638670957295026}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4576155676298888
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
-  m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
-  m_LocalPosition: {x: -8.49, y: 8.1, z: 0}
-  m_LocalScale: {x: 4.2494, y: 4.2494, z: 2.1247}
-  m_Children:
-  - {fileID: 4454153242576248}
-  - {fileID: 4575566352233248}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
---- !u!50 &50001485618136830
+--- !u!50 &50763623910126178
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
+  m_GameObject: {fileID: 1832878977660494}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -124,38 +124,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &61646827213806330
+--- !u!61 &61769360803195824
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
+  m_GameObject: {fileID: 1832878977660494}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027220786, y: -0.18182425}
+  m_Offset: {x: -1.0379419, y: -1.276387}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.32, y: 1.28}
-    newSize: {x: 1.32, y: 1.28}
+    oldSize: {x: 8.95, y: 5.4}
+    newSize: {x: 8.95, y: 5.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7734451, y: 0.9205682}
+  m_Size: {x: 3.9680123, y: 1.8948374}
   m_EdgeRadius: 0
---- !u!95 &95206561529085800
+--- !u!95 &95224401018220792
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
+  m_GameObject: {fileID: 1832878977660494}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 13a59612b5368984395c65b7b0f8852f, type: 2}
@@ -167,12 +167,59 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114531899282514072
+--- !u!114 &114434759707260258
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
+  m_GameObject: {fileID: 1832878977660494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0c9d2909bb8b448853b05831463b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSeconds: 0.25
+  healthReduced: {r: 0.8509804, g: 0.22545545, b: 0.043137256, a: 1}
+  healthRecovered: {r: 0, g: 1, b: 0.18568897, a: 1}
+--- !u!114 &114560236758512640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832878977660494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1786b6586a5809843a5cf17998681bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StraightShot: {fileID: 1410457558063518, guid: 744b276863033da43afe979a086f1778,
+    type: 2}
+  SineShot: {fileID: 1188324647463396, guid: 999cdc022d852c24abc3cc5adf9dea75, type: 2}
+  RandomShot: {fileID: 1821512790497348, guid: 6247ab1a80bb1294eb5ea1887df81c5c, type: 2}
+  ShotSpawn1: {x: -13, y: 1, z: 0}
+  ShotSpawn2: {x: -5, y: 4, z: 0}
+  ShotSpawn3: {x: 3.8, y: 7.2, z: 0}
+  phaseTwo: 0
+  isFacingLeft: 0
+  nextShooting: 0
+  fireRate: 3
+  ShortRangeAttack: {fileID: 1122860391367826, guid: 2a2a3bd845d904e4284316c99011b21e,
+    type: 2}
+  LongRangeAttack: {fileID: 1405406916456744, guid: 8012d43f1836bc044a0489e79850c215,
+    type: 2}
+  ShortRangeAttackSpawn: {fileID: 4908287331473710}
+  LongRangeAttackSpawn: {fileID: 4662902131321090}
+  movementSmoothing: 0.05
+  nextRunStart: 0
+  runEnd: 0
+  runningDuration: 2
+  idleDuration: 0.8
+--- !u!114 &114672197178157810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832878977660494}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99940ed43e662eb4791b1d8fb91f2239, type: 3}
@@ -197,7 +244,7 @@ MonoBehaviour:
   onChangeHealth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114723077937045288}
+      - m_Target: {fileID: 114434759707260258}
         m_MethodName: ChangeOfHealthHandler
         m_Mode: 0
         m_Arguments:
@@ -211,62 +258,26 @@ MonoBehaviour:
     m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   enemyDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnVictory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114723077937045288
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba0c9d2909bb8b448853b05831463b1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlightSeconds: 0.25
-  healthReduced: {r: 0.8509804, g: 0.22545545, b: 0.043137256, a: 1}
-  healthRecovered: {r: 0, g: 1, b: 0.18568897, a: 1}
---- !u!114 &114779381638345242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1786b6586a5809843a5cf17998681bc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StraightShot: {fileID: 1410457558063518, guid: 744b276863033da43afe979a086f1778,
-    type: 2}
-  SineShot: {fileID: 1188324647463396, guid: 999cdc022d852c24abc3cc5adf9dea75, type: 2}
-  RandomShot: {fileID: 1821512790497348, guid: 6247ab1a80bb1294eb5ea1887df81c5c, type: 2}
-  ShotSpawn1: {x: -13, y: 1, z: 0}
-  ShotSpawn2: {x: -5, y: 4, z: 0}
-  ShotSpawn3: {x: 3.8, y: 7.2, z: 0}
-  phaseTwo: 0
-  isFacingLeft: 0
-  nextShooting: 0
-  fireRate: 3
-  ShortRangeAttack: {fileID: 1274238034327382, guid: bb305aadbc17d3c46b4718b9ccb9373b,
-    type: 2}
-  LongRangeAttack: {fileID: 1756937373684560, guid: 7a922754b8d5c1b4a9422a8f3019d2e8,
-    type: 2}
-  ShortRangeAttackSpawn: {fileID: 4575566352233248}
-  LongRangeAttackSpawn: {fileID: 4454153242576248}
-  movementSmoothing: 0.05
-  nextRunStart: 0
-  runEnd: 0
-  runningDuration: 2
-  idleDuration: 0.8
---- !u!212 &212326203370122918
+--- !u!212 &212561372418731214
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076106311044256}
+  m_GameObject: {fileID: 1832878977660494}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -296,12 +307,12 @@ SpriteRenderer:
   m_SortingLayerID: 430301927
   m_SortingLayer: -5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: 53acabeadbcaf7c418891d782599181e, type: 3}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.32, y: 1.28}
+  m_Size: {x: 8.95, y: 5.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

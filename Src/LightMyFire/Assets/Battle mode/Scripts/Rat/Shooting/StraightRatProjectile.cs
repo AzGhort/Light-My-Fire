@@ -12,7 +12,11 @@ public class StraightRatProjectile :  RatProjectile
     }
     public override void ShootTargeted()
     {
-        Transform player = GameObject.Find("Vajgl").transform;
+        GameObject pl = GameObject.Find("Vajgl");
+        // better safe than sorry
+        if (pl == null) return;
+        Transform player = pl.transform;
+        
         Vector2 toPlayer = (new Vector2((player.position.x - transform.position.x), (player.position.y - transform.position.y))).normalized;
         rgbd.velocity = Speed * toPlayer;
     }  

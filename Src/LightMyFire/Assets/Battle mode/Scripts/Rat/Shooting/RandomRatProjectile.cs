@@ -14,7 +14,12 @@ public class RandomRatProjectile : RatProjectile
     public override void ShootTargeted()
     {
         float shift = GetRandomShift();
-        Transform player = GameObject.Find("Vajgl").transform;        
+
+        GameObject pl = GameObject.Find("Vajgl");
+        // better safe than sorry
+        if (pl == null) return;
+        Transform player = pl.transform;
+
         Vector2 toPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y).normalized;
         toPlayer += (new Vector2(Vector2.Perpendicular(toPlayer).x * shift, Vector2.Perpendicular(toPlayer).y * shift));
         rgbd.velocity = Speed * toPlayer;

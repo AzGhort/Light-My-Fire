@@ -17,6 +17,27 @@ namespace Assets.Scripts
 
         public virtual void ShootTargeted() {     }
         public virtual void ShootUntargeted() {     }
+
+        public void Destroy(Collider2D collision)
+        {
+            var diff = (gameObject.transform.position - collision.transform.position).normalized;
+            var upperRight = (collision.transform.position + new Vector3(collision.bounds.size.x / 2, collision.bounds.size.y / 2, 0)).normalized;
+            var upperLeft = (collision.transform.position + new Vector3(-collision.bounds.size.x / 2, collision.bounds.size.y / 2, 0)).normalized;
+            var lowerRight = (collision.transform.position + new Vector3(collision.bounds.size.x / 2, -collision.bounds.size.y / 2, 0)).normalized;
+            var lowerLeft = (collision.transform.position + new Vector3(-collision.bounds.size.x / 2, -collision.bounds.size.y / 2, 0)).normalized;
+
+            if (diff.y >= upperRight.y)
+            {
+                gameObject.transform.Rotate(0, 0, -90);
+            }
+            else if (diff.x >= upperRight.x)
+            {
+                gameObject.transform.Rotate(0, 0, -180);
+            }
+
+            if (ImpactEffect) { Instantiate(ImpactEffect, transform.position, transform.rotation); }
+            Destroy(gameObject);
+        }
         void Start()
         {
             rgbd = GetComponent<Rigidbody2D>();
@@ -29,13 +50,13 @@ namespace Assets.Scripts
         private void OnTriggerEnter2D(Collider2D collision)
         {
             // ignore platforms and other projectiles
-            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Platform"))
+            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Wall") 
+                || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Projectile"))
             {
                 var player = collision.GetComponent<PlayerHealthManager>();
                 if (player) { player.TakeDamage(Damage); }
 
-                if (ImpactEffect) { Instantiate(ImpactEffect, transform.position, transform.rotation); }
-                Destroy(gameObject);
+                Destroy(collision);
             }
 
         }

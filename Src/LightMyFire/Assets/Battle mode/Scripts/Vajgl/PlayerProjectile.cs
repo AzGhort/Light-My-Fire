@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 namespace LightMyFire
 {
@@ -24,8 +25,8 @@ namespace LightMyFire
 
 			var enemy = collision.GetComponent<EnemyHealthManager>();
 			if (enemy) { enemy.TakeDamage(damage); }
-
-			var pipe = collision.GetComponent<PipeHealthManager>();
+            
+            var pipe = collision.GetComponent<PipeHealthManager>();
 			if (pipe) { pipe.TakeDamage(damage); }
 
 			Instantiate(impactEffect, transform.position, transform.rotation);

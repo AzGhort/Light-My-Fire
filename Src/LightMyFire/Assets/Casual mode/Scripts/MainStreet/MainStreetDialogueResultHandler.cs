@@ -14,6 +14,7 @@ namespace LightMyFire
 		private void handleDialogueResult(string result) {
 			if (result == "MargotFight") {
 				Debug.Log("Dialog result handled - MargotFight");
+                LevelChangerSingleton.LoadScene(margotFightScene);
 			}
 			else if (result == "MargotHidden") {
 				Debug.Log("Dialog result handled - MargotHidden");

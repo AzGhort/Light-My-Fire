@@ -13,7 +13,6 @@ namespace Assets.Scripts
         protected Transform startPoint;
         [SerializeField] protected int Damage;
         protected Collider2D coll;
-        protected SpriteRenderer sprnd;
         public float GetAttackTime()
         {
             return attackTime;

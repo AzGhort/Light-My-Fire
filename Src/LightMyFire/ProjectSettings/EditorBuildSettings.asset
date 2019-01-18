@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/UI/Scenes/About.unity
     guid: d8396576dd0bedb4ebc91d3ecc00dba1
   - enabled: 1
+    path: Assets/UI/Scenes/Victory.unity
+    guid: ca44ffbd24ccec8458aef2fe0123ad48
+  - enabled: 1
+    path: Assets/UI/Scenes/Defeat.unity
+    guid: db0068c1a13781d4c977c280a08f31e8
+  - enabled: 1
     path: Assets/Casual mode/Scenes/IntroText.unity
     guid: 0f74c5cfdff52dc4ebc61256c6ed07ba
   - enabled: 1
@@ -29,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Battle mode/Scenes/RatFight.unity
     guid: 45d0dfb6ac88d854c9544b016e62c134
+  - enabled: 1
+    path: Assets/Battle mode/Scenes/MargotFight.unity
+    guid: 519af7ece5b0caa44991a5d7a80bb3eb
   m_configObjects: {}

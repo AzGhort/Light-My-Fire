@@ -64,7 +64,11 @@ public class RatAI : MonoBehaviour
     }
     private void CheckOrientation()
     {
-        Transform player = GameObject.Find("Vajgl").transform;
+        GameObject pl = GameObject.Find("Vajgl");
+        // better safe than sorry
+        if (pl == null) return;
+        Transform player = pl.transform;
+
         Vector2 toPlayer = new Vector2(player.position.x - transform.position.x, 0);
         float move = toPlayer.x;
 
@@ -85,7 +89,11 @@ public class RatAI : MonoBehaviour
         // running -> running
         if (Time.time < runEnd)
         {
-            Transform player = GameObject.Find("Vajgl").transform;
+            GameObject pl = GameObject.Find("Vajgl");
+            // better safe than sorry
+            if (pl == null) return;
+            Transform player = pl.transform;
+
             Vector2 toPlayer = new Vector2(player.position.x - transform.position.x, 0);
             float move = toPlayer.normalized.x;
             if ((toPlayer.sqrMagnitude <= 4.0f))
@@ -154,6 +162,7 @@ public class RatAI : MonoBehaviour
     private void TurnRound()
     {
         isFacingLeft = !isFacingLeft;
+        gameObject.transform.Translate(-3, 0, 0);
         gameObject.transform.Rotate(0f, 180f, 0f);
     }
     #endregion
@@ -235,8 +244,12 @@ public class RatAI : MonoBehaviour
     private void CheckShortRangedAttack()
     {
         if (attackController.IsAttacking()) return;
+        
+        GameObject pl = GameObject.Find("Vajgl");
+        // better safe than sorry
+        if (pl == null) return;
+        Transform player = pl.transform;
 
-        Transform player = GameObject.Find("Vajgl").transform;
         Vector2 toPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
         if (toPlayer.sqrMagnitude <= 16.0f)
         {
@@ -271,7 +284,7 @@ public class RatAI : MonoBehaviour
 
         nextRunStart = Time.time + idleDuration;
         ShortRangeAttack.transform.localScale = new Vector3(2, 2, 0);
-        LongRangeAttack.transform.localScale = new Vector3(3.5f, 2, 0);
+        LongRangeAttack.transform.localScale = new Vector3(2.8f, 2, 0);
     }
 	void FixedUpdate ()
     {

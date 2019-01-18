@@ -807,8 +807,8 @@ MonoBehaviour:
     Hnusnej zmrza\u010Denej vajgl...\r\n\r\nTo, \u017Ee je z tebe te\u010F \xFApln\xE1
     nula, je\u0161t\u011B neznamen\xE1, \u017Ee se nem\u016F\u017Ee\u0161 pokusit
     z toho nicotn\xFDho \u017Eivota je\u0161t\u011B n\u011Bco vyk\u0159esat. Ale aby
-    toho nebylo m\xE1lo - do toho v\u0161eho za\u010D\xEDn\xE1 fakt hust\u011B pr\u0161et...
-    m\u011Bl bys n\u011Bco rychle vymyslet ne\u017E se \xFApln\u011B rozmo\u010D\xED\u0161."
+    toho nebylo m\xE1lo, za\u010D\xEDn\xE1 do toho v\u0161eho fakt hust\u011B pr\u0161et...
+    m\u011Bl bys n\u011Bco rychle vymyslet, ne\u017E se \xFApln\u011B rozmo\u010D\xED\u0161."
 --- !u!1 &631031258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,8 +1488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   margotFightScene:
-    sceneAsset: {fileID: 0}
-    sceneName: 
+    sceneAsset: {fileID: 102900000, guid: 519af7ece5b0caa44991a5d7a80bb3eb, type: 3}
+    sceneName: Battle mode/Scenes/MargotFight
   mainStreet:
     sceneAsset: {fileID: 102900000, guid: cdb92546ef83f9546af0d6e343fdce6d, type: 3}
     sceneName: Casual mode/Scenes/MainStreet
@@ -1548,8 +1548,8 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 075a7fc97c42ce0458080c3643573846, type: 3}
     sceneName: Casual mode/Scenes/SideStreet
   margotFightScene:
-    sceneAsset: {fileID: 0}
-    sceneName: 
+    sceneAsset: {fileID: 102900000, guid: 519af7ece5b0caa44991a5d7a80bb3eb, type: 3}
+    sceneName: Battle mode/Scenes/MargotFight
   margotInteractionEntry: {fileID: 167948023}
   introTextEntry: {fileID: 438423327}
   canalEntry: {fileID: 1496522287}
