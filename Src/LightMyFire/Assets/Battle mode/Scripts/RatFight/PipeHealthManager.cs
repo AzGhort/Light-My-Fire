@@ -15,7 +15,7 @@ namespace LightMyFire
         [SerializeField] private Sprite damaged2;
         [SerializeField] private Sprite damaged3;
 
-        [SerializeField] private GameObject arrowsGuide;
+        [SerializeField] private GameObject arrow;
 
         SpriteRenderer spriteRenderer;
 
@@ -57,6 +57,8 @@ namespace LightMyFire
 
         private void PipeDestroyed()
         {
+            arrow.SetActive(false);
+
             if (pipesAlive == 0)
             {
                 var roots = gameObject.scene.GetRootGameObjects();
@@ -64,7 +66,6 @@ namespace LightMyFire
                 {
                     if (go.name == "DropPlatformsTap")
                     {
-                        arrowsGuide.SetActive(false);
                         go.SetActive(true);
                     }
                 }

@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.14117646, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1787,6 +1787,10 @@ Prefab:
       propertyPath: highlightOutOfRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1848120321123574, guid: 030ef99e5ded8124baf31dac2242b4d9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 212460553045016214, guid: 030ef99e5ded8124baf31dac2242b4d9, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 030ef99e5ded8124baf31dac2242b4d9, type: 2}
@@ -2290,12 +2294,22 @@ Prefab:
         type: 2}
       propertyPath: arrowsGuide
       value: 
-      objectReference: {fileID: 700357987}
+      objectReference: {fileID: 222771552}
     - target: {fileID: 114745712688370344, guid: 69a239c889d9f9449b962149b182250f,
         type: 2}
       propertyPath: arrowsGuide
       value: 
       objectReference: {fileID: 700357987}
+    - target: {fileID: 114745712688370344, guid: 69a239c889d9f9449b962149b182250f,
+        type: 2}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 1086975208}
+    - target: {fileID: 114559747150166594, guid: 69a239c889d9f9449b962149b182250f,
+        type: 2}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 222771552}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a239c889d9f9449b962149b182250f, type: 2}
   m_IsPrefabAsset: 0
@@ -2458,7 +2472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.2216981, b: 0.2216981, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
