@@ -1894,8 +1894,8 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 075a7fc97c42ce0458080c3643573846, type: 3}
     sceneName: Casual mode/Scenes/SideStreet
   onDeathScene:
-    sceneAsset: {fileID: 102900000, guid: db0068c1a13781d4c977c280a08f31e8, type: 3}
-    sceneName: UI/Scenes/Defeat
+    sceneAsset: {fileID: 102900000, guid: a2414f6ee4814464c9a5543b48f80b01, type: 3}
+    sceneName: Casual mode/Scenes/DefeatMargotakText
 --- !u!114 &1329405621
 MonoBehaviour:
   m_ObjectHideFlags: 0

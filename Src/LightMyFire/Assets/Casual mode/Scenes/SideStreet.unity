@@ -802,8 +802,8 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 519af7ece5b0caa44991a5d7a80bb3eb, type: 3}
     sceneName: Battle mode/Scenes/MargotFight
   victoryScreenScene:
-    sceneAsset: {fileID: 102900000, guid: ca44ffbd24ccec8458aef2fe0123ad48, type: 3}
-    sceneName: UI/Scenes/Victory
+    sceneAsset: {fileID: 102900000, guid: b07c3376a7c1c0a4a954d1d7ff304329, type: 3}
+    sceneName: Casual mode/Scenes/VictoryText
 --- !u!114 &642279678
 MonoBehaviour:
   m_ObjectHideFlags: 0

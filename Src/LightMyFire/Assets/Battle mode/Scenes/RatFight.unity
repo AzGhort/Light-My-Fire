@@ -2225,8 +2225,8 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 7e02ddf0155963041a4e1c93f84bc39a, type: 3}
     sceneName: Casual mode/Scenes/Canal
   onDeathScene:
-    sceneAsset: {fileID: 102900000, guid: db0068c1a13781d4c977c280a08f31e8, type: 3}
-    sceneName: UI/Scenes/Defeat
+    sceneAsset: {fileID: 102900000, guid: 7940093b5447657459011aa76984eea7, type: 3}
+    sceneName: Casual mode/Scenes/DefeatRatText
 --- !u!114 &1329405621
 MonoBehaviour:
   m_ObjectHideFlags: 0
