@@ -5,7 +5,8 @@ namespace LightMyFire
 	public class SingletonInit : MonoBehaviour
 	{
 		private void Awake() {
-			var init = LevelChangerSingleton.Instance;
+			var levelChanger = LevelChangerSingleton.Instance;
+            var musicPlayer = MusicPlayerSingleton.Instance;
 		}
 	}
 }

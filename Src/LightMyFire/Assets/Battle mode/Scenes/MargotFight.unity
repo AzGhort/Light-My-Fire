@@ -920,6 +920,26 @@ Prefab:
       propertyPath: enemyDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnVictory
       objectReference: {fileID: 0}
+    - target: {fileID: 61305581813416028, guid: a7817c4a07b216645a952b2f0088c7ea,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.8325377
+      objectReference: {fileID: 0}
+    - target: {fileID: 61305581813416028, guid: a7817c4a07b216645a952b2f0088c7ea,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 5.8197184
+      objectReference: {fileID: 0}
+    - target: {fileID: 61344790539119262, guid: a7817c4a07b216645a952b2f0088c7ea,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 4.683427
+      objectReference: {fileID: 0}
+    - target: {fileID: 61344790539119262, guid: a7817c4a07b216645a952b2f0088c7ea,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 6.7104263
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7817c4a07b216645a952b2f0088c7ea, type: 2}
   m_IsPrefabAsset: 0

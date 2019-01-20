@@ -38,7 +38,7 @@ namespace LightMyFire
         }
 
         public static void OnLoadSceneComplete() {
-            //StartCoroutine("coOnFadeComplete");
+            //StartCoroutine(coOnFadeComplete());
             SceneManager.LoadScene(sceneToLoad);
         }
 

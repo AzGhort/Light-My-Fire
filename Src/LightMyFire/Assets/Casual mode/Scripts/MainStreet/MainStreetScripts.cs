@@ -23,7 +23,7 @@ namespace LightMyFire
 
         public void StartRain() {
             GameState.Raining = true;
-            StartCoroutine("rainStartUp");
+            StartCoroutine(rainStartUp());
         }
 
         private IEnumerator rainStartUp() {

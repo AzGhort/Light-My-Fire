@@ -19,7 +19,7 @@ public class OnChangeHealthHighlight : MonoBehaviour {
 		if (changeOfHealth != 0) {
 			healthChange = changeOfHealth;
 			++coroutinesRunning;
-			StartCoroutine("highlightCoroutine");
+			StartCoroutine(highlightCoroutine());
 		}
 	}
 

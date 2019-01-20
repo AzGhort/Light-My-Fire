@@ -27,7 +27,7 @@ namespace LightMyFire
 					entered = true;
 					onEnterEvent.Invoke();
 
-					StartCoroutine("enterDelayWait");
+					StartCoroutine(enterDelayWait());
 				}
 			}
 		}
@@ -40,7 +40,7 @@ namespace LightMyFire
 					left = true;
 					onLeaveEvent.Invoke();
 
-					StartCoroutine("leaveDelayWait");
+					StartCoroutine(leaveDelayWait());
 				}
 			}
 		}

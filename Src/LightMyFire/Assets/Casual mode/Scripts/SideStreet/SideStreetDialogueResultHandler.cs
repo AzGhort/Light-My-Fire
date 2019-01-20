@@ -14,9 +14,11 @@ namespace LightMyFire
         private void handleDialogueResult(string result) {
             if (result == "MargotFight") {
                 Debug.Log("Dialog result handled - MargotFight");
+                MusicPlayerSingleton.Instance.FadeOutOfSong();
                 LevelChangerSingleton.LoadScene(margotFightScene);
             } else if (result == "GameFinished") {
                 Debug.Log("Dialog result handled - GameFinished");
+                MusicPlayerSingleton.Instance.FadeOutOfSong();
                 LevelChangerSingleton.LoadScene(victoryScreenScene);
             }
         }

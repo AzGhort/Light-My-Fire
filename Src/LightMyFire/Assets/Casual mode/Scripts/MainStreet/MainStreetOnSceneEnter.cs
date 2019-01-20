@@ -22,6 +22,8 @@ namespace LightMyFire
         [SerializeField] private GameObject rain;
 
         private void Start() {
+            MusicPlayerSingleton.Instance.HandleLoadedScene(MusicPlayerSingleton.MusicType.Casual);
+
             string lastSceneName = GameState.LastSceneName;
             if (introTextScene.SceneName.EndsWith(lastSceneName)) {
                 vajgl.transform.position = introTextEntry.position;

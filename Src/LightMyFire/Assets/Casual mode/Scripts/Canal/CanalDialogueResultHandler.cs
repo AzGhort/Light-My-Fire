@@ -21,15 +21,16 @@ namespace LightMyFire
         private void handleDialogueResult(string result) {
             if (result == "RatFight") {
                 Debug.Log("Dialog result handled - RatFight");
+                MusicPlayerSingleton.Instance.FadeOutOfSong();
                 LevelChangerSingleton.LoadScene(ratFightScene);
             }
             else if (result == "LookAround") {
                 Debug.Log("Dialog result handled - LookAround");
-                StartCoroutine("lookAroundCanal");
+                StartCoroutine(lookAroundCanal());
             }
             else if (result == "LookAgain") {
                 Debug.Log("Dialog result handled - LookAgain");
-                StartCoroutine("lookAroundCanalAgain");
+                StartCoroutine(lookAroundCanalAgain());
             }
             else if (result == "LetDieAndEscape") {
                 Debug.Log("Dialog result handled - LetDieAndEscape");

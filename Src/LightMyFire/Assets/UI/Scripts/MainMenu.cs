@@ -11,6 +11,7 @@ namespace LightMyFire
         [SerializeField] private SceneField aboutScene;
 
         public void LoadNewGameScene() {
+            MusicPlayerSingleton.Instance.FadeOutOfSong();
             LevelChangerSingleton.LoadScene(newGameScene);
         }
 
@@ -28,6 +29,7 @@ namespace LightMyFire
         }
 
         private void Update() {
+            if (GameState.PlayerFrozen) { return; }
             if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Interact")) {
                 EventSystem.current.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
             }

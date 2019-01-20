@@ -17,6 +17,8 @@ namespace LightMyFire
         [SerializeField] private GameObject bubbleGum;
 
         private void Start() {
+            MusicPlayerSingleton.Instance.HandleLoadedScene(MusicPlayerSingleton.MusicType.Casual);
+
             string lastSceneName = GameState.LastSceneName;
             if (mainStreetScene.SceneName.EndsWith(lastSceneName)) {
                 vajgl.transform.position = mainStreetEntry.position;

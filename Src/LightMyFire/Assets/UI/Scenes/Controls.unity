@@ -1082,7 +1082,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Pauza: P, Escape\nInterakce/Potvrdit: E\nP\u0159\xEDb\u011Bhov\xFD m\xF3d:\n
     \   Pohyb: W, A, S, D\nDialog:\n    V\xFDb\u011Br odpov\u011Bdi: 1, 2, 3, 4\n
-    \   Potvrzen\xED odpov\u011Bdi: Opakovan\xFD v\xFDb\u011Br/E\nBojov\xFD m\xF3d:\n
+    \   Potvrzen\xED odpov\u011Bdi: Opakovan\xFD v\xFDb\u011Br/E\nSoubojov\xFD m\xF3d:\n
     \   Pohyb do stran: A, D\n    Skok: W\n    \xDAtok: Mezern\xEDk"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cdf57d23633cc9b4a95269e6a9e509b7, type: 2}
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 206
+  m_firstOverflowCharacterIndex: 209
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -161.86966, w: 0}
   m_textInfo:
     textComponent: {fileID: 1964851561}
-    characterCount: 224
+    characterCount: 227
     spriteCount: 0
     spaceCount: 57
     wordCount: 36

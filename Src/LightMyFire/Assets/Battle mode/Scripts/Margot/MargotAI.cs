@@ -139,7 +139,7 @@ public class MargotAI : MonoBehaviour
         
         float f = Random.Range(0f, 1f);
         bool above = IsAbovePlatform();
-        if (f >= 0.5f && !above && toPlayer.sqrMagnitude > 10f)
+        if (f >= 0.4f && !above && toPlayer.sqrMagnitude > 10f)
         {
             attackEnd = Time.time + shootingDuration;
             rgbd.gravityScale = 0;

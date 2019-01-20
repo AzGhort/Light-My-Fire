@@ -41,6 +41,7 @@ namespace LightMyFire
         public void LoadMenu() {
             Time.timeScale = 1f;
             GameIsPaused = false;
+            MusicPlayerSingleton.Instance.FadeOutOfSong();
             LevelChangerSingleton.LoadScene(mainMenuScene);
         }
 
